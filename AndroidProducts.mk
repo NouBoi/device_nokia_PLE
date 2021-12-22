@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_land.mk
+    $(LOCAL_DIR)/lineage_PLE.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_land-user \
-    aosp_land-userdebug \
-    aosp_land-eng
+    lineage_PLE-user \
+    lineage_PLE-userdebug \
+    lineage_PLE-eng

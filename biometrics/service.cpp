@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.biometrics.fingerprint@2.1-service.land"
+#define LOG_TAG "android.biometrics.fingerprint@2.1-service.PLE"
 
 #include <binder/ProcessState.h>
 

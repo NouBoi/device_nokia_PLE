@@ -1,8 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.1-service.land
-LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.1-service.land.rc
+LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.1-service.PLE
+LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.1-service.PLE.rc
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := \

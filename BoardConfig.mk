@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/land
+DEVICE_PATH := device/nokia/PLE
 
 # Architecture
 TARGET_ARCH 	    	:= arm64
@@ -47,16 +47,14 @@ TARGET_BOOTLOADER_BOARD_NAME 	:= msm8937
 TARGET_NO_BOOTLOADER 		:= true
 
 # kernel
-BOARD_KERNEL_BASE		:= 0x80000000
-BOARD_KERNEL_CMDLINE 		:= androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.usbconfigfs=false loop.max_part=7
-BOARD_KERNEL_IMAGE_NAME 	:= Image.gz-dtb
-BOARD_KERNEL_PAGESIZE 		:=  2048
-BOARD_MKBOOTIMG_ARGS 		:= --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
-TARGET_KERNEL_CONFIG 		:= land_defconfig
-TARGET_KERNEL_SOURCE 		:= kernel/xiaomi/msm8937
-TARGET_KERNEL_VERSION         := 4.9
-TARGET_KERNEL_CLANG_COMPILE     := true
-TARGET_EXFAT_DRIVER		:= sdfat
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_PAGESIZE :=  2048
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
+
+TARGET_KERNEL_CONFIG := PLE_defconfig
+TARGET_KERNEL_SOURCE := kernel/nokia/PLE
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -185,9 +183,9 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB         := libinit_land
+TARGET_INIT_VENDOR_LIB         := libinit_PLE
 TARGET_PLATFORM_DEVICE_BASE    := /devices/soc/
-TARGET_RECOVERY_DEVICE_MODULES := libinit_land
+TARGET_RECOVERY_DEVICE_MODULES := libinit_PLE
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
@@ -202,10 +200,10 @@ MALLOC_SVELTE_FOR_LIBC32 := true
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 67108864
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE  := ext4
-BOARD_CACHEIMAGE_PARTITION_SIZE    := 258998272
+BOARD_CACHEIMAGE_PARTITION_SIZE    := 268435456
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 3119513600
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 10365157376 #10365173760 - 16384 use the 16gb version
+BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 3221225472
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 26301931008 #10365173760 - 16384 use the 16gb version
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_PARTITION_SIZE   := 536870912
 BOARD_FLASH_BLOCK_SIZE 		   := 131072
@@ -262,4 +260,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
--include vendor/xiaomi/land/BoardConfigVendor.mk
+-include vendor/nokia/PLE/BoardConfigVendor.mk

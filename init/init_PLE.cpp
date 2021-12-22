@@ -123,8 +123,8 @@ static void variant_properties() {
 
     // Set variant based on board_id
     if (board_id == "S88537AB1") {
-        property_override("ro.product.model", "Redmi 3X");
-        property_override("ro.product.vendor.model", "Redmi 3X");
+        property_override("ro.product.model", "Nokia 6 2017");
+        property_override("ro.product.vendor.model", "Nokia 6 2017");
     }
 }
 

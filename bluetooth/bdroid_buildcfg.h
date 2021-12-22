@@ -18,13 +18,18 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#include <string.h>
+#define BTM_DEF_LOCAL_NAME   "Nokia 6 TA-1021"
 
-#define MAX_ACL_CONNECTIONS    16
+// Disables read remote device feature
+#define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    16
 #define BLE_VND_INCLUDED   TRUE
+#define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
 
-// Wide-band speech support
+// skips conn update at conn completion
+#define BT_CLEAN_TURN_ON_DISABLED 1
+#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
+#define BTM_WBS_INCLUDED TRUE
 #define BTIF_HF_WBS_PREFERRED TRUE
 
 /* Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec */
@@ -32,9 +37,4 @@
 
 /* Enable HFP WBS feature */
 #define BTIF_HF_CLIENT_WBS_INCLUDED TRUE
-
-/* Disable enhanced sco commands */
-#define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
-#define BTM_SCO_ENHANCED_SYNC_DISABLED TRUE
-
-#endif /* _BDROID_BUILDCFG_H */
+#endif
