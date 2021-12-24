@@ -373,11 +373,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom
-    
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service
+    android.hardware.power-service-qti \
+    android.hardware.power.stats@1.0-service.mock
 
 # Qcom soong namespace
 QCOM_SOONG_NAMESPACE := hardware/qcom-caf/msm8996-r
