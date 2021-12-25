@@ -55,6 +55,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --second_offset 0x00f00000 -
 
 TARGET_KERNEL_CONFIG := PLE_defconfig
 TARGET_KERNEL_SOURCE := kernel/nokia/PLE
+TARGET_PREBUILT_KERNEL := device/nokia/PLE/kernel
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
