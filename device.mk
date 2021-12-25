@@ -19,6 +19,16 @@
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# kernel
+ifeq ($(TARGET_PREBUILD_KERNEL),)
+LOCAL_KERNEL := device/nokia/PLE/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILE += \
+    $(LOCAL_KERNEL):kernel
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
