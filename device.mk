@@ -136,8 +136,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    GCam \
-    camera.msm8937
+    android.hardware.camera.provider@2.4-impl:32 \
+    android.hardware.camera.provider@2.4-service \
+    camera.msm8937 \
+    libmm-qcamera \
+    GCam
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4 \
