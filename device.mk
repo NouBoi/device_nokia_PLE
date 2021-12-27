@@ -503,11 +503,5 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-nokia
 
-# HALS
-SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8996/audio
-SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/msm8996/display
-SRC_MEDIA_HAL_DIR := hardware/qcom-caf/msm8996/media
-
-
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/nokia/PLE/PLE-vendor.mk)
