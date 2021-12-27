@@ -35,9 +35,6 @@
 #include <utils/Mutex.h>
 #include <utils/List.h>
 
-//Media depedancies
-#include "OMX_QCOMExtns.h"
-
 // Display dependencies
 #include "qdMetaData.h"
 
